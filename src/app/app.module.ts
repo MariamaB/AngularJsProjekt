@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { MessageComponent } from './components/message/message.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MessageComponent } from './components/message/message.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
