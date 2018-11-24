@@ -9,7 +9,7 @@ import {Observable} from 'rxjs/index';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Observable<Hero[]>;
+  heroes: Hero[];
   selectedHero: Hero;
 
 
@@ -24,7 +24,8 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
   }
 
 }
